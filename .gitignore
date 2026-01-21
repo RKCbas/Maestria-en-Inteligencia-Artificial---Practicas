@@ -1,0 +1,19 @@
+# Ignora __pycache__ en cualquier nivel
+__pycache__/
+
+# Ignora archivos .pyc (bytecode compilado)
+*.pyc
+
+# Ignora archivos .pyo
+*.pyo
+
+# Ignora archivos .pyd
+*.pyd
+
+# Ignora directorios .pytest_cache
+.pytest_cache/
+
+# Ignora directorios .egg-info
+*.egg-info/
+dist/
+build/
