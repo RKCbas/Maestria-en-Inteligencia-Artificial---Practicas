@@ -1,0 +1,6 @@
+producto,precio,unidades_vendidas,total_venta
+Laptop,15000.0,5,75000.0
+Mouse,250.0,20,5000.0
+Teclado,800.0,15,12000.0
+Monitor,3500.0,8,28000.0
+TOTAL,,,120000.0

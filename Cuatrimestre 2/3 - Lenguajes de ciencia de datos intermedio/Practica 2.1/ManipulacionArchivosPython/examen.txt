@@ -1,0 +1,13 @@
+EXAMEN - 5 PREGUNTAS SELECCIONADAS ALEATORIAMENTE
+============================================================
+
+1. ¿Cómo se define una clase en Python?
+
+2. ¿Qué es el decorador @staticmethod en Python?
+
+3. ¿Qué es una función lambda en Python?
+
+4. Explica el concepto de cierre (closure) en programación.
+
+5. ¿Cómo se maneja la excepción en Python?
+

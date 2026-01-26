@@ -1,0 +1,44 @@
+======================================================================
+ANÁLISIS DE SUPERVIVENCIA DEL TITANIC POR CLASE DE PASAJERO
+======================================================================
+
+Total de pasajeros analizados: 1309
+Fecha del análisis: (generado automáticamente)
+
+----------------------------------------------------------------------
+ESTADÍSTICAS POR CLASE
+----------------------------------------------------------------------
+
+Clase: 1st
+  Total de pasajeros:         323
+  Sobrevivientes:             200  (61.92%)
+  Fallecidos:                 123  (38.08%)
+
+Clase: 2nd
+  Total de pasajeros:         277
+  Sobrevivientes:             119  (42.96%)
+  Fallecidos:                 158  (57.04%)
+
+Clase: 3rd
+  Total de pasajeros:         709
+  Sobrevivientes:             181  (25.53%)
+  Fallecidos:                 528  (74.47%)
+
+----------------------------------------------------------------------
+TOTALES GENERALES
+----------------------------------------------------------------------
+  Total de pasajeros:        1309
+  Sobrevivientes:             500  (38.20%)
+  Fallecidos:                 809  (61.80%)
+
+======================================================================
+CONCLUSIONES
+======================================================================
+
+- La clase con mayor tasa de supervivencia fue: 1st
+  (61.92%)
+
+- La clase con menor tasa de supervivencia fue: 3rd
+  (25.53%)
+
+======================================================================

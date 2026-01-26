@@ -1,0 +1,25 @@
+¿Qué es una variable en programación?
+Define el concepto de función en Python.
+¿Qué es una lista en Python?
+Explica la diferencia entre tuplas y listas.
+¿Qué es un diccionario en Python?
+¿Cómo se define una clase en Python?
+¿Qué es la herencia en programación orientada a objetos?
+¿Cuál es la diferencia entre 'break' y 'continue' en un bucle?
+¿Cómo se maneja la excepción en Python?
+¿Qué es el polimorfismo en programación orientada a objetos?
+Explica el concepto de recursión.
+¿Qué es una función lambda en Python?
+¿Cómo se utiliza la función map en Python?
+Explica el uso de la función filter en Python.
+¿Qué es la comprensión de listas en Python?
+¿Cómo se implementa un iterador en Python?
+¿Qué es un generador en Python?
+Explica el concepto de cierre (closure) en programación.
+¿Qué es una expresión generadora en Python?
+¿Cómo se maneja el contexto con la declaración with en Python?
+Explica la diferencia entre deep copy y shallow copy.
+¿Cómo se serializa un objeto en Python?
+¿Qué es el decorador @staticmethod en Python?
+¿Cuál es la diferencia entre los métodos __init__ y __new__?
+Explica el uso de la función zip en Python.
