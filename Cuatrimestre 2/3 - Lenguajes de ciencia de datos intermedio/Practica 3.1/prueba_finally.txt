@@ -1,0 +1,3 @@
+Línea 1: Este es un archivo de prueba
+Línea 2: Para demostrar el uso de finally
+Línea 3: El archivo se cerrará siempre

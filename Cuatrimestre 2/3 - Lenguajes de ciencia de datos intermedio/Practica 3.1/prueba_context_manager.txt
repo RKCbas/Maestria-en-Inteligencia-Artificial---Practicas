@@ -1,0 +1,3 @@
+Línea 1: Hola desde el context manager
+Línea 2: El archivo se gestionará automáticamente
+Línea 3: Se cerrará incluso si hay errores

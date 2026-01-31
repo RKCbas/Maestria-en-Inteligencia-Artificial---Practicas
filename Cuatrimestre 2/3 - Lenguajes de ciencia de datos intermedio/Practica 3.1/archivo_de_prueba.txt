@@ -1,0 +1,5 @@
+Línea 1: Este es un archivo de prueba
+Línea 2: Creado para demostrar el manejo de excepciones
+Línea 3: El programa puede abrir archivos existentes
+Línea 4: Y manejar errores cuando no existen
+Línea 5: ¡Python es genial!
