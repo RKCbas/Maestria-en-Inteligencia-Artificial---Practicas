@@ -19,3 +19,5 @@ dist/
 build/
 
 Cuatrimestre 2/4 - Percepción Computacional/Tarea 03/sportimages/
+
+*.stackdump
