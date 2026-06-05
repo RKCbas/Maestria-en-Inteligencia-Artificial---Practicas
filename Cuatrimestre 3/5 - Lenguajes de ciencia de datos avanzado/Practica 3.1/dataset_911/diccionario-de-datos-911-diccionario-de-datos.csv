@@ -1,0 +1,23 @@
+n°,Nombre,Variable,Descripción o categorías,Rango valido,Tipo
+1,Folio,folio,"Código único alfanumérico que se la asigna a cada uno de los incidentes, esta compuesto por dos iniciales del Centro que recibio la emergencia, fecha en formato AA/MM/DD y número consecutivo de ingreso, ejemplo: AO/181201/10801",##/######/#####,Alfanumérico
+2,Motivo,incidente_c4,Tipo de incidente,*véase catalogo de motivos en Manual de usuarios,Texto
+3,Fecha de creación,fecha_creacion,Fecha de apertura del folio del evento,DD/MM/AAAA,Fecha
+4,Hora de creación,hora_creacion,Hora de apertura del folio del evento,HH:MM:SS,Hora
+5,Mes creación ,mes_creacion,Mes de apertura del folio del evento,,Texto
+6,Año Creación ,año_creacion ,Año de apertura del folio del evento,,Numérico
+7,Fecha de cierre,fecha_cierre,Fecha de cierre del folio del evento,DD/MM/AAAA,Fecha
+8,Mes de cierre ,mes_cierre,Mes de cierre del folio del evento,,Texto
+9,Año de cierre ,año_cierre,Año de cierre del folio del evento,,Numérico
+10,Hora de cierre,hora_cierre,Hora de cierre del folio del evento,HH:MM:SS,Hora
+11,Colonia,colonia,Colonia donde se reporto inicialmente el incidente,Catalogo de colonias INEGI 2019,texto
+12,Manzana,manzana,Manzana asignada donde se reporto el incidente,Catalogo de colonias INEGI 2019,Alfanumerico
+13,Latitud,Latitud_centroide,Latitud,Referencia geográfica referente al centroide de la manzana donde ocurrió el incidente,Coordenada
+14,Longitud,Longitud_centroide,Longitud,Referencia geográfica referente al centroide de la manzana donde ocurrió el incidente,Coordenada
+15,Código de cierre,codigo_cierre,Código que fue asignado al incidente en el cierre,Afirmativo (A),Una unidad de atención a emergencias de la SSC confirmó la emergencia reportada
+,,,,Informativo (I),Solicitud de información
+,,,,Negativo (N),"Una unidad de atención a emergencias fue despachada, llego al lugar de los hechos, pero en el sitio del evento nadie confirmó la emergencia ni fue solicitado el apoyo de la unidad"
+,,,,Duplicado (D),El incidente reportado se registro en dos o mas ocasiones procediendo a mantener un solo reporte como el original
+,,,,Falso (F),El incidente reportado inicialmente fue considerado como falso en el lugar de los hechos
+16,Clasificación,clasificacion,Clasificación del incidente,"DELITOS, EMERGENCIA, URGENCIAS, MEDICAS, FALTA CIVICA, SERVICIO, FALSA ALARMA",Texto
+17,Alcaldía de cierre del incidente,delegacion_cierre,Alcaldía donde cierra el folio del incidente,Una de las 16 alcaldias de la Ciudad de Mexico,Texto
+18,Polígono de la colonia ,geometry ,Polígono que describe los límites territoriales de una colonia ,,Polígono 

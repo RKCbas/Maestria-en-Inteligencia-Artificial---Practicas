@@ -21,3 +21,6 @@ build/
 Cuatrimestre 2/4 - Percepción Computacional/Tarea 03/sportimages/
 
 *.stackdump
+
+# Datasets grandes (superan el límite de GitHub)
+Cuatrimestre 3/5 - Lenguajes de ciencia de datos avanzado/Practica 3.1/dataset_911/
