@@ -63,6 +63,7 @@
         "encs",
         "estadisticas",
         "executemany",
+        "facecolors",
         "fontface",
         "forcats",
         "François",
@@ -99,12 +100,15 @@
         "Lehtosalo",
         "lightcoral",
         "lightgreen",
+        "linestyles",
         "linetype",
         "lubridate",
         "Luraschi",
         "malic",
         "mandopop",
         "Manipulacion",
+        "markerscale",
+        "mathbf",
         "maximo",
         "MEDV",
         "metodos",
@@ -136,6 +140,7 @@
         "Pandya",
         "PASCAMION",
         "Pclass",
+        "pcolormesh",
         "Pedersen",
         "plotly",
         "poblacion",
@@ -154,6 +159,7 @@
         "Richi",
         "richie",
         "Ritchie",
+        "Rosenblatt",
         "Rossum",
         "rownames",
         "rpsls",
@@ -203,6 +209,7 @@
         "yintercept",
         "ymax",
         "ymin",
-        "ypos"
+        "ypos",
+        "zorder"
     ]
 }
