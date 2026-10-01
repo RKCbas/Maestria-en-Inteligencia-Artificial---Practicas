@@ -1,0 +1,688 @@
+{
+  "dominio": "Aprendizaje profundo y procesamiento de lenguaje natural",
+  "intenciones": [
+    {
+      "tag": "saludo",
+      "patrones": [
+        "hola",
+        "buenos días",
+        "buenas tardes",
+        "buenas noches",
+        "qué tal",
+        "hola, ¿cómo estás?",
+        "hey, ¿hay alguien ahí?",
+        "saludos",
+        "hola bot",
+        "buen día, quiero preguntarte algo"
+      ],
+      "respuesta": "¡Hola! Soy un asistente especializado en aprendizaje profundo y procesamiento de lenguaje natural. Puedes preguntarme, por ejemplo, qué es una LSTM, cómo funciona Word2Vec o qué es un Transformer.",
+      "relacionados": ["capacidades"]
+    },
+    {
+      "tag": "despedida",
+      "patrones": [
+        "adiós",
+        "hasta luego",
+        "nos vemos",
+        "bye",
+        "me voy, gracias por todo",
+        "hasta pronto",
+        "eso es todo por hoy",
+        "chao",
+        "terminamos, hasta la próxima",
+        "ya me tengo que ir"
+      ],
+      "respuesta": "¡Hasta luego! Mucho éxito con tus estudios de aprendizaje profundo. Vuelve cuando tengas otra duda.",
+      "relacionados": []
+    },
+    {
+      "tag": "agradecimiento",
+      "patrones": [
+        "gracias",
+        "muchas gracias",
+        "te lo agradezco",
+        "gracias, me sirvió mucho",
+        "excelente explicación, gracias",
+        "muy útil, gracias",
+        "mil gracias",
+        "genial, eso era lo que necesitaba",
+        "perfecto, ya entendí",
+        "gracias por la ayuda"
+      ],
+      "respuesta": "¡Con gusto! Si quieres profundizar en otro tema, pregúntame.",
+      "relacionados": []
+    },
+    {
+      "tag": "capacidades",
+      "patrones": [
+        "¿qué puedes hacer?",
+        "¿en qué me puedes ayudar?",
+        "¿de qué temas sabes?",
+        "¿qué te puedo preguntar?",
+        "¿para qué sirves?",
+        "¿cuáles son tus funciones?",
+        "¿qué temas conoces?",
+        "ayuda",
+        "¿qué tipo de preguntas respondes?",
+        "dame una lista de temas"
+      ],
+      "respuesta": "Puedo explicarte conceptos de aprendizaje profundo y PLN: redes neuronales, retropropagación, optimizadores, sobreajuste, CNN, RNN, LSTM, GRU, atención, Transformers, BERT, embeddings (Word2Vec, GloVe, FastText), tokenización, análisis de sentimientos, métricas y más.",
+      "relacionados": ["que_es_deep_learning", "que_es_pln"]
+    },
+    {
+      "tag": "que_es_ia",
+      "patrones": [
+        "¿qué es la inteligencia artificial?",
+        "define inteligencia artificial",
+        "¿qué significa IA?",
+        "explícame qué es la IA",
+        "¿qué es la IA y para qué sirve?",
+        "¿cuál es la diferencia entre IA y machine learning?",
+        "¿qué es el aprendizaje automático?",
+        "¿qué es machine learning?",
+        "diferencia entre inteligencia artificial, machine learning y deep learning"
+      ],
+      "respuesta": "La inteligencia artificial es el campo que busca que las máquinas realicen tareas que requieren inteligencia, como razonar, percibir o comunicarse. El aprendizaje automático (machine learning) es un subcampo en el que el sistema aprende patrones a partir de datos en lugar de seguir reglas escritas a mano. El aprendizaje profundo es a su vez un subcampo del machine learning que usa redes neuronales con muchas capas.",
+      "relacionados": ["que_es_deep_learning"]
+    },
+    {
+      "tag": "que_es_deep_learning",
+      "patrones": [
+        "¿qué es el aprendizaje profundo?",
+        "¿qué es deep learning?",
+        "explícame el deep learning",
+        "¿por qué se llama aprendizaje profundo?",
+        "¿qué tiene de especial el deep learning?",
+        "¿para qué se usa el aprendizaje profundo?",
+        "define aprendizaje profundo",
+        "¿qué ventajas tiene el deep learning sobre el machine learning clásico?",
+        "¿cuándo conviene usar deep learning?"
+      ],
+      "respuesta": "El aprendizaje profundo usa redes neuronales con muchas capas que aprenden representaciones jerárquicas de los datos: las primeras capas detectan patrones simples y las siguientes los combinan en conceptos más abstractos. Su gran ventaja es que aprende las características automáticamente, sin ingeniería manual, por lo que domina en imágenes, audio y texto. A cambio necesita muchos datos y cómputo (normalmente GPU).",
+      "relacionados": ["neurona_artificial", "retropropagacion"]
+    },
+    {
+      "tag": "neurona_artificial",
+      "patrones": [
+        "¿qué es una neurona artificial?",
+        "¿qué es un perceptrón?",
+        "¿cómo funciona el perceptrón?",
+        "explícame el perceptrón de Rosenblatt",
+        "¿qué son los pesos y el sesgo de una neurona?",
+        "¿qué es una red neuronal?",
+        "¿cómo funciona una red neuronal?",
+        "¿qué es un perceptrón multicapa?",
+        "¿qué es una capa oculta?",
+        "¿qué es una red densa o fully connected?"
+      ],
+      "respuesta": "Una neurona artificial calcula una suma ponderada de sus entradas más un sesgo (z = w·x + b) y le aplica una función de activación. El perceptrón de Rosenblatt (1958) es la neurona más simple y solo separa clases linealmente. Al apilar neuronas en capas ocultas se obtiene el perceptrón multicapa, que puede aproximar funciones no lineales complejas.",
+      "relacionados": ["funciones_activacion", "retropropagacion"]
+    },
+    {
+      "tag": "funciones_activacion",
+      "patrones": [
+        "¿qué es una función de activación?",
+        "¿para qué sirve la función de activación?",
+        "¿qué es ReLU?",
+        "¿qué es la función sigmoide?",
+        "diferencia entre sigmoide, tanh y ReLU",
+        "¿qué es softmax?",
+        "¿por qué se necesitan funciones no lineales?",
+        "¿qué activación uso en la capa de salida?",
+        "¿qué es la tangente hiperbólica en redes neuronales?"
+      ],
+      "respuesta": "La función de activación introduce no linealidad; sin ella, muchas capas equivaldrían a una sola transformación lineal. ReLU (max(0, x)) es la más usada en capas ocultas porque es simple y mitiga el gradiente desvaneciente. La sigmoide produce valores entre 0 y 1 y se usa en salidas binarias y en las compuertas de LSTM y GRU; tanh produce valores entre -1 y 1; softmax convierte un vector en una distribución de probabilidad para clasificación multiclase.",
+      "relacionados": ["neurona_artificial", "gradiente_desvaneciente"]
+    },
+    {
+      "tag": "retropropagacion",
+      "patrones": [
+        "¿qué es la retropropagación?",
+        "¿qué es backpropagation?",
+        "¿cómo aprende una red neuronal?",
+        "¿cómo se calculan los gradientes en una red?",
+        "explícame el algoritmo de backpropagation",
+        "¿qué es la regla de la cadena en redes neuronales?",
+        "¿cómo se actualizan los pesos de una red?",
+        "¿qué es el paso hacia adelante y hacia atrás?",
+        "¿qué es backpropagation through time?"
+      ],
+      "respuesta": "La retropropagación calcula el gradiente de la pérdida respecto a cada peso aplicando la regla de la cadena desde la salida hacia la entrada. Primero se hace el paso hacia adelante (se calcula la predicción y la pérdida) y luego el paso hacia atrás (se propagan las derivadas). En redes recurrentes se usa su variante 'backpropagation through time', que despliega la red a lo largo de los pasos de tiempo.",
+      "relacionados": ["descenso_gradiente", "gradiente_desvaneciente"]
+    },
+    {
+      "tag": "descenso_gradiente",
+      "patrones": [
+        "¿qué es el descenso de gradiente?",
+        "¿cómo funciona gradient descent?",
+        "¿qué es el descenso de gradiente estocástico?",
+        "¿qué es SGD?",
+        "diferencia entre batch, mini-batch y estocástico",
+        "¿por qué se usa el gradiente para optimizar?",
+        "¿qué es un mínimo local?",
+        "explícame el descenso por gradiente"
+      ],
+      "respuesta": "El descenso de gradiente ajusta los pesos en la dirección opuesta al gradiente de la pérdida: w ← w − η·∇L, donde η es la tasa de aprendizaje. La versión estocástica (SGD) estima el gradiente con un mini-lote de ejemplos en lugar de todo el conjunto, lo que es más rápido y el ruido ayuda a escapar de malos mínimos locales.",
+      "relacionados": ["optimizadores", "tasa_aprendizaje", "funcion_perdida"]
+    },
+    {
+      "tag": "funcion_perdida",
+      "patrones": [
+        "¿qué es una función de pérdida?",
+        "¿qué es la función de costo?",
+        "¿qué es la entropía cruzada?",
+        "¿qué es cross entropy?",
+        "¿qué es el error cuadrático medio?",
+        "¿qué pérdida uso para clasificación?",
+        "¿qué pérdida uso para regresión?",
+        "¿qué mide la loss?",
+        "¿qué es MSE?"
+      ],
+      "respuesta": "La función de pérdida mide qué tan lejos están las predicciones de los valores reales, y es lo que la red minimiza. En clasificación se usa la entropía cruzada, que penaliza fuertemente asignar poca probabilidad a la clase correcta. En regresión se usa el error cuadrático medio (MSE) o el error absoluto medio (MAE).",
+      "relacionados": ["descenso_gradiente", "metricas"]
+    },
+    {
+      "tag": "optimizadores",
+      "patrones": [
+        "¿qué es Adam?",
+        "¿qué optimizador me recomiendas?",
+        "diferencia entre Adam y SGD",
+        "¿qué es RMSprop?",
+        "¿qué es el momentum?",
+        "¿qué es un optimizador en deep learning?",
+        "¿cómo funciona el optimizador Adam?",
+        "¿qué es AdamW?",
+        "¿por qué Adam es tan popular?"
+      ],
+      "respuesta": "Un optimizador define cómo se actualizan los pesos a partir de los gradientes. El momentum acumula gradientes pasados para avanzar más rápido en direcciones consistentes. RMSprop adapta la tasa de aprendizaje de cada peso según la magnitud reciente de sus gradientes. Adam combina ambos y funciona bien casi siempre con poca configuración; AdamW corrige la forma en que Adam aplica la regularización L2 y es el estándar para Transformers.",
+      "relacionados": ["descenso_gradiente", "tasa_aprendizaje"]
+    },
+    {
+      "tag": "tasa_aprendizaje",
+      "patrones": [
+        "¿qué es la tasa de aprendizaje?",
+        "¿qué es el learning rate?",
+        "¿qué pasa si el learning rate es muy grande?",
+        "¿qué pasa si la tasa de aprendizaje es muy pequeña?",
+        "¿cómo elijo la tasa de aprendizaje?",
+        "¿qué es un scheduler de learning rate?",
+        "¿qué es el warmup?",
+        "¿cuál es un buen valor de learning rate?"
+      ],
+      "respuesta": "La tasa de aprendizaje controla el tamaño de cada paso de actualización. Si es muy grande, la pérdida oscila o diverge; si es muy pequeña, el entrenamiento es lento o se estanca. Valores típicos son 1e-3 para Adam y entre 2e-5 y 5e-5 para ajustar Transformers. Los schedulers la reducen durante el entrenamiento y el warmup la aumenta gradualmente al inicio para estabilizarlo.",
+      "relacionados": ["optimizadores", "descenso_gradiente"]
+    },
+    {
+      "tag": "epocas_lotes",
+      "patrones": [
+        "¿qué es una época?",
+        "¿qué es un epoch?",
+        "¿qué es el batch size?",
+        "¿qué es el tamaño de lote?",
+        "¿cuántas épocas debo entrenar?",
+        "diferencia entre época, lote e iteración",
+        "¿qué pasa si uso un batch muy grande?",
+        "¿qué es un mini-batch?"
+      ],
+      "respuesta": "Una época es una pasada completa por todo el conjunto de entrenamiento. Cada época se divide en lotes (batches); cada lote produce una iteración, es decir, una actualización de pesos. Lotes grandes aprovechan mejor la GPU pero usan más memoria y a veces generalizan peor; el número de épocas suele decidirse con early stopping observando la pérdida de validación.",
+      "relacionados": ["sobreajuste", "division_datos"]
+    },
+    {
+      "tag": "division_datos",
+      "patrones": [
+        "¿para qué sirve el conjunto de validación?",
+        "diferencia entre entrenamiento, validación y prueba",
+        "¿qué es el conjunto de test?",
+        "¿cómo divido mis datos?",
+        "¿qué es la validación cruzada?",
+        "¿por qué no debo evaluar con los datos de entrenamiento?",
+        "¿qué es un split estratificado?",
+        "¿qué es la fuga de datos?"
+      ],
+      "respuesta": "El conjunto de entrenamiento ajusta los pesos, el de validación sirve para elegir hiperparámetros y detectar sobreajuste, y el de prueba se usa una sola vez al final para estimar el desempeño real. Evaluar con datos de entrenamiento sobreestima el rendimiento. La división estratificada conserva la proporción de clases, y hay que evitar la fuga de datos: que información del conjunto de prueba se filtre al entrenamiento.",
+      "relacionados": ["sobreajuste", "metricas"]
+    },
+    {
+      "tag": "sobreajuste",
+      "patrones": [
+        "¿qué es el sobreajuste?",
+        "¿qué es overfitting?",
+        "¿cómo sé si mi modelo está sobreajustado?",
+        "¿cómo evito el overfitting?",
+        "¿qué es el subajuste?",
+        "¿qué es underfitting?",
+        "mi modelo tiene buena precisión en entrenamiento pero mala en prueba",
+        "¿qué es el early stopping?",
+        "¿qué es la regularización?",
+        "¿qué es la regularización L2 o weight decay?"
+      ],
+      "respuesta": "El sobreajuste ocurre cuando el modelo memoriza los datos de entrenamiento y no generaliza: la pérdida de entrenamiento baja mientras la de validación sube. Se combate con más datos, aumento de datos, dropout, regularización L2 (weight decay), modelos más pequeños y early stopping, que detiene el entrenamiento cuando la validación deja de mejorar. El subajuste es lo contrario: el modelo es demasiado simple y falla incluso en entrenamiento.",
+      "relacionados": ["dropout", "division_datos"]
+    },
+    {
+      "tag": "dropout",
+      "patrones": [
+        "¿qué es el dropout?",
+        "¿cómo funciona dropout?",
+        "¿por qué dropout reduce el sobreajuste?",
+        "¿qué valor de dropout uso?",
+        "¿dropout se aplica en la predicción?",
+        "¿qué es la normalización por lotes?",
+        "¿qué es batch normalization?",
+        "¿qué es layer normalization?"
+      ],
+      "respuesta": "Dropout apaga aleatoriamente una fracción de neuronas (por ejemplo, 30 %) en cada paso de entrenamiento, lo que obliga a la red a no depender de unas pocas y reduce el sobreajuste; en la predicción se desactiva. La normalización por lotes (BatchNorm) y por capa (LayerNorm) re-escalan las activaciones para estabilizar y acelerar el entrenamiento; LayerNorm es la que usan RNN y Transformers porque no depende del tamaño del lote.",
+      "relacionados": ["sobreajuste"]
+    },
+    {
+      "tag": "gradiente_desvaneciente",
+      "patrones": [
+        "¿qué es el gradiente desvaneciente?",
+        "¿qué es el vanishing gradient?",
+        "¿por qué las RNN no recuerdan secuencias largas?",
+        "¿qué es la explosión del gradiente?",
+        "¿qué es el exploding gradient?",
+        "¿qué es el gradient clipping?",
+        "¿por qué se desvanece el gradiente?",
+        "¿cómo resuelve la LSTM el gradiente desvaneciente?",
+        "¿qué son las dependencias de largo plazo?"
+      ],
+      "respuesta": "Al retropropagar a través de muchas capas o pasos de tiempo, el gradiente se multiplica repetidamente por matrices y derivadas; si esos factores son menores que 1 se desvanece exponencialmente y si son mayores que 1 explota. En una RNN simple esto impide aprender dependencias de largo plazo. Las LSTM y GRU lo mitigan con compuertas y un camino aditivo para la memoria; la explosión se controla con gradient clipping.",
+      "relacionados": ["rnn", "lstm", "gru"]
+    },
+    {
+      "tag": "cnn",
+      "patrones": [
+        "¿qué es una red convolucional?",
+        "¿qué es una CNN?",
+        "¿cómo funciona una convolución?",
+        "¿qué es un filtro o kernel?",
+        "¿qué es el pooling?",
+        "¿para qué sirven las CNN?",
+        "¿se pueden usar CNN para texto?",
+        "¿qué es max pooling?",
+        "explícame las redes neuronales convolucionales"
+      ],
+      "respuesta": "Una red convolucional (CNN) aplica filtros pequeños que se deslizan sobre la entrada para detectar patrones locales, compartiendo los mismos pesos en todas las posiciones. El pooling reduce la resolución y aporta invariancia a pequeños desplazamientos. Son el estándar en visión, y en texto una convolución 1D sobre embeddings detecta n-gramas relevantes de forma rápida.",
+      "relacionados": ["transfer_learning"]
+    },
+    {
+      "tag": "transfer_learning",
+      "patrones": [
+        "¿qué es el transfer learning?",
+        "¿qué es el aprendizaje por transferencia?",
+        "¿qué es el fine-tuning?",
+        "¿qué es un modelo preentrenado?",
+        "¿por qué usar un modelo preentrenado?",
+        "¿qué significa ajustar finamente un modelo?",
+        "¿qué es congelar capas?",
+        "diferencia entre extracción de características y fine-tuning"
+      ],
+      "respuesta": "El aprendizaje por transferencia reutiliza un modelo entrenado con muchos datos en una tarea general para resolver otra tarea con pocos datos. Se puede usar como extractor de características (congelando sus capas) o hacer fine-tuning, es decir, seguir entrenando todos sus pesos con una tasa de aprendizaje pequeña. En PLN esto revolucionó el campo: se ajusta BERT o un modelo similar en lugar de entrenar desde cero.",
+      "relacionados": ["bert", "cnn"]
+    },
+    {
+      "tag": "rnn",
+      "patrones": [
+        "¿qué es una red neuronal recurrente?",
+        "¿qué es una RNN?",
+        "¿cómo funciona una RNN?",
+        "¿para qué sirven las redes recurrentes?",
+        "¿qué es el estado oculto de una RNN?",
+        "¿por qué se usan RNN para texto?",
+        "explícame las redes recurrentes",
+        "¿qué es una SimpleRNN?",
+        "¿cómo procesa una secuencia una red recurrente?"
+      ],
+      "respuesta": "Una red recurrente procesa una secuencia elemento por elemento y mantiene un estado oculto que resume lo visto hasta el momento: h_t = tanh(W·x_t + U·h_{t−1} + b). Los mismos pesos se reutilizan en cada paso, así que puede procesar secuencias de cualquier longitud, lo que la hace natural para texto, audio y series de tiempo. Su principal limitación es el gradiente desvaneciente, que le impide recordar dependencias lejanas.",
+      "relacionados": ["lstm", "gru", "gradiente_desvaneciente"]
+    },
+    {
+      "tag": "lstm",
+      "patrones": [
+        "¿qué es una LSTM?",
+        "¿cómo funciona una LSTM?",
+        "¿qué significa Long Short-Term Memory?",
+        "¿qué son las compuertas de una LSTM?",
+        "¿qué es la compuerta de olvido?",
+        "¿qué es el estado de celda?",
+        "explícame la arquitectura LSTM",
+        "¿por qué la LSTM recuerda mejor que la RNN?",
+        "¿qué es la puerta de entrada y la de salida?"
+      ],
+      "respuesta": "La LSTM (Hochreiter y Schmidhuber, 1997) agrega un estado de celda c_t que funciona como una cinta de memoria y tres compuertas sigmoides: la de olvido decide qué borrar, la de entrada qué escribir y la de salida qué exponer en el estado oculto. Como la celda se actualiza de forma aditiva (c_t = f·c_{t−1} + i·c̃_t), el gradiente puede fluir por muchos pasos sin desvanecerse, lo que permite aprender dependencias de largo plazo.",
+      "relacionados": ["gru", "lstm_vs_gru", "gradiente_desvaneciente"]
+    },
+    {
+      "tag": "gru",
+      "patrones": [
+        "¿qué es una GRU?",
+        "¿cómo funciona una GRU?",
+        "¿qué significa Gated Recurrent Unit?",
+        "¿qué es la compuerta de actualización?",
+        "¿qué es la compuerta de reinicio?",
+        "explícame la unidad recurrente con compuertas",
+        "¿qué compuertas tiene una GRU?",
+        "¿quién propuso la GRU?"
+      ],
+      "respuesta": "La GRU (Cho et al., 2014) simplifica la LSTM: fusiona el estado de celda con el estado oculto y usa solo dos compuertas. La compuerta de actualización decide cuánto del estado anterior conservar y cuánto reemplazar con la información nueva, y la de reinicio decide cuánto del pasado usar al calcular el candidato. Tiene menos parámetros que la LSTM y suele rendir de forma similar.",
+      "relacionados": ["lstm", "lstm_vs_gru"]
+    },
+    {
+      "tag": "lstm_vs_gru",
+      "patrones": [
+        "diferencia entre LSTM y GRU",
+        "¿qué es mejor, LSTM o GRU?",
+        "¿cuándo usar GRU en lugar de LSTM?",
+        "compara RNN, LSTM y GRU",
+        "¿cuál es más rápida, LSTM o GRU?",
+        "LSTM vs GRU",
+        "¿qué red recurrente me conviene?",
+        "¿por qué la GRU tiene menos parámetros?"
+      ],
+      "respuesta": "La RNN simple es la más ligera pero sufre de gradiente desvaneciente. La LSTM tiene 4 bloques de pesos (tres compuertas y el candidato) y un estado de celda separado; la GRU tiene 3 bloques, así que usa cerca de 25 % menos parámetros y entrena más rápido. En la práctica rinden parecido: la GRU conviene con pocos datos o recursos limitados y la LSTM a veces gana en secuencias muy largas. Hoy ambas son superadas por los Transformers en la mayoría de tareas de PLN.",
+      "relacionados": ["lstm", "gru", "transformer"]
+    },
+    {
+      "tag": "bidireccional",
+      "patrones": [
+        "¿qué es una RNN bidireccional?",
+        "¿qué es una BiLSTM?",
+        "¿para qué sirve una LSTM bidireccional?",
+        "¿qué significa bidireccional en redes recurrentes?",
+        "¿cuándo usar una red bidireccional?",
+        "¿qué es una red recurrente apilada?",
+        "¿puedo apilar varias capas LSTM?"
+      ],
+      "respuesta": "Una red bidireccional usa dos RNN: una lee la secuencia de izquierda a derecha y otra de derecha a izquierda, y se concatenan sus estados. Así cada palabra tiene contexto del pasado y del futuro, lo que mejora la clasificación y el etiquetado de texto. No sirve para generar texto palabra por palabra, porque ahí el futuro todavía no existe. Además, se pueden apilar varias capas recurrentes para aprender representaciones más abstractas.",
+      "relacionados": ["lstm", "atencion"]
+    },
+    {
+      "tag": "seq2seq",
+      "patrones": [
+        "¿qué es un modelo seq2seq?",
+        "¿qué es una arquitectura encoder-decoder?",
+        "¿cómo funciona la traducción automática con redes?",
+        "¿qué es un codificador y un decodificador?",
+        "¿cómo se genera texto con una LSTM?",
+        "¿qué es sequence to sequence?",
+        "¿qué es el teacher forcing?"
+      ],
+      "respuesta": "Un modelo seq2seq tiene un codificador que lee la secuencia de entrada y la resume en un vector de contexto, y un decodificador que genera la secuencia de salida paso a paso a partir de ese contexto. Se usó para traducción, resúmenes y chatbots generativos. Durante el entrenamiento se usa teacher forcing (se le da al decodificador la palabra correcta anterior). Su cuello de botella, comprimir toda la frase en un solo vector, motivó el mecanismo de atención.",
+      "relacionados": ["atencion", "transformer"]
+    },
+    {
+      "tag": "atencion",
+      "patrones": [
+        "¿qué es el mecanismo de atención?",
+        "¿cómo funciona la atención en redes neuronales?",
+        "¿qué es attention?",
+        "¿qué es la autoatención?",
+        "¿qué es self-attention?",
+        "¿qué son query, key y value?",
+        "¿para qué sirve la atención?",
+        "¿qué es la atención multi-cabeza?"
+      ],
+      "respuesta": "La atención permite que el modelo, en cada paso, mire directamente todas las posiciones de la entrada y les asigne pesos según su relevancia, en lugar de depender de un único vector resumen. En la autoatención cada palabra genera una consulta (query), una clave (key) y un valor (value); los pesos son softmax(Q·K^T/√d) y la salida es la suma ponderada de los valores. La atención multi-cabeza hace esto varias veces en paralelo para capturar distintos tipos de relaciones.",
+      "relacionados": ["transformer", "seq2seq"]
+    },
+    {
+      "tag": "transformer",
+      "patrones": [
+        "¿qué es un Transformer?",
+        "¿cómo funciona la arquitectura Transformer?",
+        "explícame el paper Attention is all you need",
+        "¿por qué los Transformers reemplazaron a las RNN?",
+        "¿qué ventajas tiene el Transformer sobre la LSTM?",
+        "¿qué es el positional encoding?",
+        "¿qué es la codificación posicional?",
+        "¿qué es mejor, un Transformer o una LSTM?"
+      ],
+      "respuesta": "El Transformer (Vaswani et al., 2017) elimina la recurrencia y se basa solo en autoatención, capas feed-forward, conexiones residuales y normalización. Como procesa todas las palabras en paralelo, entrena mucho más rápido en GPU, y cualquier par de palabras está a un solo paso de distancia, así que captura dependencias largas sin gradiente desvaneciente. El orden se incorpora con codificación posicional. Es la base de BERT, GPT y prácticamente todos los modelos de lenguaje actuales.",
+      "relacionados": ["atencion", "bert", "llm"]
+    },
+    {
+      "tag": "bert",
+      "patrones": [
+        "¿qué es BERT?",
+        "¿cómo funciona BERT?",
+        "¿qué es BETO?",
+        "¿qué es un modelo de lenguaje enmascarado?",
+        "¿cómo se entrena BERT?",
+        "¿qué es RoBERTa?",
+        "¿para qué sirve BERT?",
+        "¿qué es el token CLS?"
+      ],
+      "respuesta": "BERT (Devlin et al., 2018) es un codificador Transformer bidireccional preentrenado con modelado de lenguaje enmascarado: se ocultan palabras al azar y el modelo aprende a predecirlas usando el contexto de ambos lados. Después se ajusta (fine-tuning) para tareas como clasificación, usando la representación del token especial [CLS]. BETO es la versión de BERT entrenada con texto en español por la Universidad de Chile.",
+      "relacionados": ["transformer", "transfer_learning", "embeddings_contextuales"]
+    },
+    {
+      "tag": "llm",
+      "patrones": [
+        "¿qué es GPT?",
+        "¿qué es un modelo de lenguaje grande?",
+        "¿qué es un LLM?",
+        "¿cómo funciona ChatGPT?",
+        "diferencia entre BERT y GPT",
+        "¿qué es un modelo generativo de texto?",
+        "¿qué es RAG?",
+        "¿qué es un modelo autorregresivo?"
+      ],
+      "respuesta": "Un modelo de lenguaje grande (LLM) como GPT es un decodificador Transformer autorregresivo: se entrena para predecir la siguiente palabra (token) y genera texto token por token. A diferencia de BERT, que es bidireccional y está orientado a comprender, GPT solo ve el contexto a la izquierda y está orientado a generar. Con miles de millones de parámetros y ajuste con instrucciones se convierten en asistentes conversacionales; con RAG se les da acceso a documentos externos para responder con información actualizada.",
+      "relacionados": ["transformer", "bert", "chatbot"]
+    },
+    {
+      "tag": "que_es_pln",
+      "patrones": [
+        "¿qué es el procesamiento de lenguaje natural?",
+        "¿qué es PLN?",
+        "¿qué es NLP?",
+        "¿para qué sirve el procesamiento del lenguaje natural?",
+        "¿qué tareas resuelve el PLN?",
+        "¿cómo entiende el texto una computadora?",
+        "¿por qué es difícil el lenguaje natural para una máquina?",
+        "aplicaciones del procesamiento de lenguaje natural"
+      ],
+      "respuesta": "El procesamiento de lenguaje natural (PLN) es el área de la IA que permite a las computadoras analizar, entender y generar lenguaje humano. Incluye tareas como clasificación de texto, análisis de sentimientos, reconocimiento de entidades, traducción, resumen y chatbots. Es difícil por la ambigüedad, la dependencia del contexto, la ironía y la variedad del lenguaje; el deep learning lo abordó representando palabras como vectores (embeddings) y procesándolas con RNN y Transformers.",
+      "relacionados": ["tokenizacion", "embeddings", "analisis_sentimientos"]
+    },
+    {
+      "tag": "tokenizacion",
+      "patrones": [
+        "¿qué es la tokenización?",
+        "¿qué es un token?",
+        "¿cómo se divide un texto en tokens?",
+        "¿qué es la tokenización por subpalabras?",
+        "¿qué es WordPiece?",
+        "¿qué es BPE?",
+        "¿qué es byte pair encoding?",
+        "¿qué pasa con las palabras fuera del vocabulario?",
+        "¿qué es una palabra OOV?"
+      ],
+      "respuesta": "La tokenización divide el texto en unidades (tokens) que el modelo procesa: palabras, subpalabras o caracteres. Tokenizar por palabras produce vocabularios enormes y deja palabras desconocidas (OOV). Los algoritmos de subpalabras como BPE y WordPiece dividen las palabras raras en fragmentos frecuentes (por ejemplo, 'desconfiable' → 'des', '##confia', '##ble'), así que cualquier palabra puede representarse con un vocabulario fijo de unas 30,000 unidades.",
+      "relacionados": ["preprocesamiento_texto", "fasttext"]
+    },
+    {
+      "tag": "preprocesamiento_texto",
+      "patrones": [
+        "¿cómo se preprocesa un texto?",
+        "¿qué son las stopwords?",
+        "¿qué es la lematización?",
+        "¿qué es el stemming?",
+        "diferencia entre lematización y stemming",
+        "¿debo quitar los acentos y pasar a minúsculas?",
+        "¿qué es la normalización de texto?",
+        "¿qué son los n-gramas?",
+        "¿hay que quitar las stopwords para análisis de sentimientos?"
+      ],
+      "respuesta": "El preprocesamiento limpia y estandariza el texto: minúsculas, eliminación de signos o URLs y tokenización. Las stopwords son palabras muy frecuentes y poco informativas ('el', 'de', 'que'). El stemming recorta palabras a una raíz aproximada ('corriendo' → 'corr') y la lematización las lleva a su forma de diccionario ('corriendo' → 'correr'). Ojo: en análisis de sentimientos no conviene quitar palabras como 'no' o 'muy', que cambian el significado, y con modelos como BERT casi no se preprocesa.",
+      "relacionados": ["tokenizacion", "bolsa_palabras"]
+    },
+    {
+      "tag": "bolsa_palabras",
+      "patrones": [
+        "¿qué es la bolsa de palabras?",
+        "¿qué es bag of words?",
+        "¿qué es TF-IDF?",
+        "¿cómo funciona TF-IDF?",
+        "¿qué es la codificación one-hot?",
+        "¿por qué one-hot no captura significado?",
+        "¿qué desventajas tiene la bolsa de palabras?",
+        "¿cómo se representaba el texto antes de los embeddings?"
+      ],
+      "respuesta": "La bolsa de palabras representa un documento como un vector de conteos de su vocabulario, ignorando el orden. TF-IDF pondera cada palabra por su frecuencia en el documento y la penaliza si aparece en muchos documentos, resaltando los términos distintivos. Ambas producen vectores enormes y dispersos, y como en one-hot todas las palabras son ortogonales, 'bueno' y 'excelente' resultan tan distintas como 'bueno' y 'mesa'. Los embeddings resuelven eso.",
+      "relacionados": ["embeddings", "preprocesamiento_texto"]
+    },
+    {
+      "tag": "embeddings",
+      "patrones": [
+        "¿qué es un embedding?",
+        "¿qué son los word embeddings?",
+        "¿qué es un vector de palabras?",
+        "¿cómo se representan las palabras como vectores?",
+        "¿qué es la hipótesis distribucional?",
+        "¿qué es la capa Embedding?",
+        "¿para qué sirven los embeddings?",
+        "¿qué es la similitud coseno?"
+      ],
+      "respuesta": "Un embedding es un vector denso de pocas dimensiones (por ejemplo, 100 o 300) que representa una palabra, de modo que palabras con significado parecido quedan cerca. Se basa en la hipótesis distribucional: 'una palabra se conoce por las palabras que la acompañan'. La cercanía se mide con la similitud coseno. En una red, la capa Embedding es una tabla de búsqueda que convierte índices de palabras en vectores y puede inicializarse con vectores preentrenados como Word2Vec, GloVe o FastText.",
+      "relacionados": ["word2vec", "glove", "fasttext", "embeddings_contextuales"]
+    },
+    {
+      "tag": "word2vec",
+      "patrones": [
+        "¿qué es Word2Vec?",
+        "¿cómo funciona Word2Vec?",
+        "¿qué es skip-gram?",
+        "¿qué es CBOW?",
+        "diferencia entre skip-gram y CBOW",
+        "¿qué es el negative sampling?",
+        "¿cómo se entrena Word2Vec?",
+        "¿cómo funcionan las analogías rey menos hombre más mujer?"
+      ],
+      "respuesta": "Word2Vec (Mikolov et al., 2013) aprende embeddings con una red poco profunda que predice el contexto. CBOW predice una palabra a partir de sus vecinas y Skip-gram predice las vecinas a partir de la palabra, siendo mejor para palabras poco frecuentes. Para ser eficiente usa negative sampling: aprende a distinguir pares reales palabra-contexto de pares aleatorios. Los vectores resultantes capturan relaciones lineales, como rey − hombre + mujer ≈ reina.",
+      "relacionados": ["glove", "fasttext", "embeddings"]
+    },
+    {
+      "tag": "glove",
+      "patrones": [
+        "¿qué es GloVe?",
+        "¿cómo funciona GloVe?",
+        "¿qué significa Global Vectors?",
+        "diferencia entre Word2Vec y GloVe",
+        "¿qué es la matriz de co-ocurrencia?",
+        "¿GloVe es mejor que Word2Vec?",
+        "¿cómo se entrena GloVe?"
+      ],
+      "respuesta": "GloVe (Pennington et al., 2014, Stanford) construye primero una matriz global de co-ocurrencias entre palabras y luego aprende vectores cuyo producto punto aproxime el logaritmo de esas co-ocurrencias, usando mínimos cuadrados ponderados. Word2Vec aprende de ventanas locales de forma predictiva; GloVe aprovecha estadísticas globales del corpus. En la práctica rinden de forma similar, y la elección depende más del corpus y del tamaño que del algoritmo.",
+      "relacionados": ["word2vec", "fasttext"]
+    },
+    {
+      "tag": "fasttext",
+      "patrones": [
+        "¿qué es FastText?",
+        "¿cómo funciona FastText?",
+        "¿qué ventaja tiene FastText sobre Word2Vec?",
+        "¿cómo maneja FastText las palabras desconocidas?",
+        "¿qué son los n-gramas de caracteres?",
+        "¿qué embeddings estáticos son mejores para español?",
+        "¿FastText sirve para palabras mal escritas?"
+      ],
+      "respuesta": "FastText (Bojanowski et al., 2017, Facebook) extiende Skip-gram representando cada palabra como la suma de los vectores de sus n-gramas de caracteres (por ejemplo, 'gato' → '<ga', 'gat', 'ato', 'to>'). Así comparte información entre palabras de la misma familia, lo que es muy útil en idiomas con mucha morfología como el español, y puede generar vectores para palabras que nunca vio o que están mal escritas. Por eso suele ser la mejor opción entre los embeddings estáticos.",
+      "relacionados": ["word2vec", "glove", "embeddings_contextuales"]
+    },
+    {
+      "tag": "embeddings_contextuales",
+      "patrones": [
+        "¿qué son los embeddings contextuales?",
+        "diferencia entre embeddings estáticos y contextuales",
+        "¿qué es ELMo?",
+        "¿qué son los sentence embeddings?",
+        "¿qué es Sentence-BERT?",
+        "¿cómo representar una oración completa como vector?",
+        "¿cómo resuelven los embeddings la polisemia?",
+        "¿qué alternativa es mejor que Word2Vec y GloVe?"
+      ],
+      "respuesta": "Word2Vec, GloVe y FastText son estáticos: dan el mismo vector a 'banco' en 'me senté en el banco' y 'deposité en el banco'. Los embeddings contextuales (ELMo, BERT) calculan el vector de cada palabra según la oración completa, resolviendo la polisemia. Sentence-BERT ajusta BERT para producir un vector por oración, de modo que frases con el mismo significado queden cerca; es ideal para búsqueda semántica y es lo que usa este chatbot para encontrar la respuesta más parecida.",
+      "relacionados": ["bert", "fasttext", "chatbot"]
+    },
+    {
+      "tag": "analisis_sentimientos",
+      "patrones": [
+        "¿qué es el análisis de sentimientos?",
+        "¿cómo funciona el análisis de sentimientos?",
+        "¿qué es la minería de opiniones?",
+        "¿cómo detecta una red si un texto es positivo o negativo?",
+        "¿qué modelo uso para análisis de sentimientos?",
+        "¿por qué es difícil detectar la ironía?",
+        "¿cómo afectan las negaciones al sentimiento?",
+        "¿para qué sirve el análisis de sentimientos?"
+      ],
+      "respuesta": "El análisis de sentimientos clasifica la polaridad de un texto (positivo, neutral o negativo) o incluso emociones específicas. Se usa para analizar reseñas, redes sociales y atención al cliente. Los enfoques van de diccionarios de palabras a TF-IDF con regresión logística, RNN/LSTM sobre embeddings y, actualmente, Transformers ajustados como BETO, que manejan mejor las negaciones ('no está nada mal') y el contexto. La ironía sigue siendo difícil porque el significado literal contradice la intención.",
+      "relacionados": ["que_es_pln", "lstm", "bert"]
+    },
+    {
+      "tag": "metricas",
+      "patrones": [
+        "¿qué es la exactitud o accuracy?",
+        "¿qué es la precisión y la sensibilidad?",
+        "¿qué es el F1-score?",
+        "¿qué es el recall?",
+        "¿qué es una matriz de confusión?",
+        "¿qué métrica uso con clases desbalanceadas?",
+        "¿qué es el F1 macro?",
+        "¿cómo evalúo un clasificador?"
+      ],
+      "respuesta": "La exactitud (accuracy) es el porcentaje de aciertos, pero engaña con clases desbalanceadas. La precisión mide cuántas predicciones positivas fueron correctas y la sensibilidad (recall) cuántos positivos reales se detectaron; el F1 es su media armónica. El F1 macro promedia el F1 de cada clase por igual, así que es la mejor métrica global con desbalance. La matriz de confusión muestra qué clases se confunden entre sí.",
+      "relacionados": ["division_datos", "funcion_perdida"]
+    },
+    {
+      "tag": "autoencoder_gan",
+      "patrones": [
+        "¿qué es un autoencoder?",
+        "¿qué es una GAN?",
+        "¿qué es una red generativa adversaria?",
+        "¿cómo funcionan las GAN?",
+        "¿qué es un autocodificador variacional?",
+        "¿qué es un modelo de difusión?",
+        "¿cómo se generan imágenes con redes neuronales?"
+      ],
+      "respuesta": "Un autoencoder comprime la entrada en un código pequeño y aprende a reconstruirla; sirve para reducción de dimensionalidad y detección de anomalías, y su versión variacional (VAE) puede generar datos nuevos. Una GAN enfrenta a dos redes: un generador que produce muestras falsas y un discriminador que intenta distinguirlas de las reales. Hoy los modelos de difusión, que aprenden a quitar ruido paso a paso, son el estado del arte en generación de imágenes.",
+      "relacionados": ["que_es_deep_learning"]
+    },
+    {
+      "tag": "chatbot",
+      "patrones": [
+        "¿cómo funcionas?",
+        "¿cómo funciona este chatbot?",
+        "¿qué es un chatbot?",
+        "¿cómo entiendes mis preguntas?",
+        "¿eres una inteligencia artificial?",
+        "¿qué modelo usas para responder?",
+        "¿cómo se construye un chatbot?",
+        "¿eres ChatGPT?"
+      ],
+      "respuesta": "Soy un chatbot híbrido basado en recuperación. Primero preproceso tu mensaje; luego una red GRU con embeddings FastText clasifica tu intención y, en paralelo, un modelo Sentence-BERT busca la pregunta más parecida en mi base de conocimiento por similitud coseno. Combino ambas confianzas para elegir la respuesta y, además, un modelo de análisis de sentimientos detecta si escribes con frustración para ajustar el tono. No genero texto libre: elijo respuestas redactadas y verificadas.",
+      "relacionados": ["embeddings_contextuales", "gru", "analisis_sentimientos"]
+    },
+    {
+      "tag": "fuera_de_dominio",
+      "patrones": [
+        "¿qué clima hará mañana?",
+        "¿quién ganó el partido de fútbol ayer?",
+        "dame una receta de enchiladas",
+        "¿cuál es la capital de Francia?",
+        "cuéntame un chiste",
+        "¿qué película me recomiendas?",
+        "¿cuánto cuesta un boleto de avión a Cancún?",
+        "¿cómo arreglo la llave del lavabo?",
+        "¿cuál es el precio del dólar hoy?",
+        "¿qué canción está de moda?",
+        "¿cómo bajo de peso rápido?",
+        "¿quién es el presidente de México?"
+      ],
+      "respuesta": "Eso está fuera de mi área: solo sé de aprendizaje profundo y procesamiento de lenguaje natural. Puedes preguntarme, por ejemplo, sobre LSTM, Transformers, embeddings o análisis de sentimientos.",
+      "relacionados": ["capacidades"]
+    }
+  ]
+}

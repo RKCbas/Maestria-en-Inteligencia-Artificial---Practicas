@@ -1,0 +1,182 @@
+{
+  "descripcion": "Frases de prueba redactadas por separado de los patrones de entrenamiento (paráfrasis, lenguaje informal y errores de ortografía) para medir la generalización del chatbot.",
+  "ejemplos": [
+    {"texto": "holaa, buen día", "tag": "saludo"},
+    {"texto": "qué onda, ¿me ayudas?", "tag": "saludo"},
+    {"texto": "hola, espero que estés bien", "tag": "saludo"},
+
+    {"texto": "bueno, me despido", "tag": "despedida"},
+    {"texto": "nos vemos luego, cuídate", "tag": "despedida"},
+    {"texto": "ya terminé, adiós", "tag": "despedida"},
+
+    {"texto": "muchísimas gracias por explicarlo", "tag": "agradecimiento"},
+    {"texto": "te pasaste, gracias", "tag": "agradecimiento"},
+    {"texto": "ok gracias, quedó clarísimo", "tag": "agradecimiento"},
+
+    {"texto": "¿sobre qué cosas sabes responder?", "tag": "capacidades"},
+    {"texto": "¿qué temas manejas?", "tag": "capacidades"},
+    {"texto": "no sé qué preguntarte, ¿qué sabes?", "tag": "capacidades"},
+
+    {"texto": "¿en qué consiste la inteligencia artificial?", "tag": "que_es_ia"},
+    {"texto": "¿el machine learning es lo mismo que la IA?", "tag": "que_es_ia"},
+    {"texto": "defíneme aprendizaje automático", "tag": "que_es_ia"},
+
+    {"texto": "¿en qué consiste el deep learning?", "tag": "que_es_deep_learning"},
+    {"texto": "¿por qué le dicen profundo al aprendizaje profundo?", "tag": "que_es_deep_learning"},
+    {"texto": "¿qué problemas resuelve el aprendizaje profundo?", "tag": "que_es_deep_learning"},
+
+    {"texto": "¿cómo trabaja una neurona en una red?", "tag": "neurona_artificial"},
+    {"texto": "¿qué hace el perceptron?", "tag": "neurona_artificial"},
+    {"texto": "¿qué son las capas ocultas de una red neuronal?", "tag": "neurona_artificial"},
+
+    {"texto": "¿para qué se usa relu?", "tag": "funciones_activacion"},
+    {"texto": "¿por qué no puedo usar solo funciones lineales en la red?", "tag": "funciones_activacion"},
+    {"texto": "¿cuándo uso softmax y cuándo sigmoide?", "tag": "funciones_activacion"},
+
+    {"texto": "¿cómo se propaga el error hacia atrás?", "tag": "retropropagacion"},
+    {"texto": "explica backprop por favor", "tag": "retropropagacion"},
+    {"texto": "¿cómo calcula la red las derivadas de los pesos?", "tag": "retropropagacion"},
+
+    {"texto": "¿cómo funciona el gradiente descendente?", "tag": "descenso_gradiente"},
+    {"texto": "¿qué significa bajar por el gradiente?", "tag": "descenso_gradiente"},
+    {"texto": "¿qué es el descenso estocástico?", "tag": "descenso_gradiente"},
+
+    {"texto": "¿qué pérdida conviene para clasificar varias clases?", "tag": "funcion_perdida"},
+    {"texto": "¿qué es la entropia cruzada?", "tag": "funcion_perdida"},
+    {"texto": "¿qué representa el valor de la loss?", "tag": "funcion_perdida"},
+
+    {"texto": "¿Adam o SGD, cuál conviene?", "tag": "optimizadores"},
+    {"texto": "¿qué hace el optimizador adam?", "tag": "optimizadores"},
+    {"texto": "¿para qué sirve el momento en la optimización?", "tag": "optimizadores"},
+
+    {"texto": "¿qué valor de learning rate uso?", "tag": "tasa_aprendizaje"},
+    {"texto": "mi pérdida diverge, ¿será la tasa de aprendizaje?", "tag": "tasa_aprendizaje"},
+    {"texto": "¿para qué sirve reducir el learning rate durante el entrenamiento?", "tag": "tasa_aprendizaje"},
+
+    {"texto": "¿cuántas epocas son suficientes?", "tag": "epocas_lotes"},
+    {"texto": "¿qué tamaño de batch me conviene?", "tag": "epocas_lotes"},
+    {"texto": "¿qué es una iteración en el entrenamiento?", "tag": "epocas_lotes"},
+
+    {"texto": "¿por qué separo datos de validación?", "tag": "division_datos"},
+    {"texto": "¿qué porcentaje dejo para prueba?", "tag": "division_datos"},
+    {"texto": "¿qué es el k-fold cross validation?", "tag": "division_datos"},
+
+    {"texto": "mi red memoriza los datos y falla con datos nuevos", "tag": "sobreajuste"},
+    {"texto": "¿qué es el sobre ajuste?", "tag": "sobreajuste"},
+    {"texto": "¿cómo funciona detener el entrenamiento antes de tiempo?", "tag": "sobreajuste"},
+
+    {"texto": "¿para qué apagar neuronas al azar?", "tag": "dropout"},
+    {"texto": "¿qué hace la capa dropout?", "tag": "dropout"},
+    {"texto": "¿qué es batchnorm?", "tag": "dropout"},
+
+    {"texto": "¿por qué se hace chiquito el gradiente en redes profundas?", "tag": "gradiente_desvaneciente"},
+    {"texto": "¿qué es el problema del desvanecimiento del gradiente?", "tag": "gradiente_desvaneciente"},
+    {"texto": "¿cómo evito que exploten los gradientes?", "tag": "gradiente_desvaneciente"},
+
+    {"texto": "¿cómo funcionan las redes convolucionales?", "tag": "cnn"},
+    {"texto": "¿qué hace un kernel en una imagen?", "tag": "cnn"},
+    {"texto": "¿para qué sirve una capa de pooling?", "tag": "cnn"},
+
+    {"texto": "¿cómo reutilizo un modelo ya entrenado?", "tag": "transfer_learning"},
+    {"texto": "¿qué es hacer finetuning?", "tag": "transfer_learning"},
+    {"texto": "¿conviene congelar las capas de un modelo preentrenado?", "tag": "transfer_learning"},
+
+    {"texto": "¿cómo trabajan las redes recurrentes?", "tag": "rnn"},
+    {"texto": "¿qué es el hidden state?", "tag": "rnn"},
+    {"texto": "¿qué red uso para procesar secuencias?", "tag": "rnn"},
+
+    {"texto": "¿cómo funciona la memoria de largo y corto plazo?", "tag": "lstm"},
+    {"texto": "¿para qué sirve la puerta de olvido?", "tag": "lstm"},
+    {"texto": "explícame las lstm", "tag": "lstm"},
+
+    {"texto": "¿cómo trabaja la gru?", "tag": "gru"},
+    {"texto": "¿qué hace la puerta de reset en una GRU?", "tag": "gru"},
+    {"texto": "¿qué es una unidad recurrente con compuertas?", "tag": "gru"},
+
+    {"texto": "¿GRU o LSTM, cuál elijo?", "tag": "lstm_vs_gru"},
+    {"texto": "¿en qué se diferencian la lstm y la gru?", "tag": "lstm_vs_gru"},
+    {"texto": "comparación entre redes recurrentes", "tag": "lstm_vs_gru"},
+
+    {"texto": "¿qué ventaja tiene leer la oración en ambos sentidos?", "tag": "bidireccional"},
+    {"texto": "¿qué es bi-lstm?", "tag": "bidireccional"},
+    {"texto": "¿cómo funciona una LSTM en las dos direcciones?", "tag": "bidireccional"},
+
+    {"texto": "¿cómo traduce texto una red codificador decodificador?", "tag": "seq2seq"},
+    {"texto": "¿qué es encoder decoder?", "tag": "seq2seq"},
+    {"texto": "¿cómo generar una secuencia a partir de otra?", "tag": "seq2seq"},
+
+    {"texto": "¿cómo decide la red a qué palabras prestar atención?", "tag": "atencion"},
+    {"texto": "¿qué son las consultas, claves y valores?", "tag": "atencion"},
+    {"texto": "¿qué es multi head attention?", "tag": "atencion"},
+
+    {"texto": "¿cómo funcionan los transformers?", "tag": "transformer"},
+    {"texto": "¿por qué ya casi no se usan las LSTM y se usan transformers?", "tag": "transformer"},
+    {"texto": "¿cómo sabe el transformer el orden de las palabras?", "tag": "transformer"},
+
+    {"texto": "¿cómo se preentrena bert?", "tag": "bert"},
+    {"texto": "¿existe un BERT en español?", "tag": "bert"},
+    {"texto": "¿qué significa enmascarar palabras al entrenar?", "tag": "bert"},
+
+    {"texto": "¿cómo genera texto chatgpt?", "tag": "llm"},
+    {"texto": "¿en qué se diferencia GPT de BERT?", "tag": "llm"},
+    {"texto": "¿qué son los modelos de lenguaje grandes?", "tag": "llm"},
+
+    {"texto": "¿en qué consiste el pln?", "tag": "que_es_pln"},
+    {"texto": "¿cómo hace una computadora para entender el lenguaje humano?", "tag": "que_es_pln"},
+    {"texto": "¿qué aplicaciones tiene el nlp?", "tag": "que_es_pln"},
+
+    {"texto": "¿cómo se parte un texto en tokens?", "tag": "tokenizacion"},
+    {"texto": "¿qué hago con palabras que no están en el vocabulario?", "tag": "tokenizacion"},
+    {"texto": "¿cómo funciona el tokenizador de subpalabras?", "tag": "tokenizacion"},
+
+    {"texto": "¿conviene quitar las palabras vacías?", "tag": "preprocesamiento_texto"},
+    {"texto": "¿qué diferencia hay entre lematizar y hacer stemming?", "tag": "preprocesamiento_texto"},
+    {"texto": "¿cómo limpio el texto antes de entrenar?", "tag": "preprocesamiento_texto"},
+
+    {"texto": "¿qué es tfidf?", "tag": "bolsa_palabras"},
+    {"texto": "¿cómo se cuentan las palabras de un documento para representarlo?", "tag": "bolsa_palabras"},
+    {"texto": "¿qué problema tiene la representación one hot?", "tag": "bolsa_palabras"},
+
+    {"texto": "¿cómo se convierte una palabra en un vector denso?", "tag": "embeddings"},
+    {"texto": "¿qué es un embeding?", "tag": "embeddings"},
+    {"texto": "¿cómo mido qué tan parecidas son dos palabras?", "tag": "embeddings"},
+
+    {"texto": "¿cómo aprende word2vec los vectores?", "tag": "word2vec"},
+    {"texto": "¿qué es mejor, cbow o skipgram?", "tag": "word2vec"},
+    {"texto": "explícame el muestreo negativo", "tag": "word2vec"},
+
+    {"texto": "¿qué hace glove con las co-ocurrencias?", "tag": "glove"},
+    {"texto": "¿en qué se distingue glove de word2vec?", "tag": "glove"},
+    {"texto": "¿qué son los vectores globales de Stanford?", "tag": "glove"},
+
+    {"texto": "¿por qué fasttext funciona con palabras nuevas?", "tag": "fasttext"},
+    {"texto": "¿fasttext usa pedazos de palabras?", "tag": "fasttext"},
+    {"texto": "¿qué embedding estático sirve con errores de ortografía?", "tag": "fasttext"},
+
+    {"texto": "¿cómo obtengo un vector para toda una frase?", "tag": "embeddings_contextuales"},
+    {"texto": "¿qué supera a word2vec y glove hoy en día?", "tag": "embeddings_contextuales"},
+    {"texto": "¿cómo distingue un modelo los distintos significados de una palabra?", "tag": "embeddings_contextuales"},
+
+    {"texto": "¿cómo saber si una reseña es positiva o negativa?", "tag": "analisis_sentimientos"},
+    {"texto": "¿qué es la clasificación de polaridad?", "tag": "analisis_sentimientos"},
+    {"texto": "¿cómo detectar emociones en un texto?", "tag": "analisis_sentimientos"},
+
+    {"texto": "¿qué es el f1?", "tag": "metricas"},
+    {"texto": "¿cómo leo una matriz de confusion?", "tag": "metricas"},
+    {"texto": "¿por qué la exactitud engaña si las clases están desbalanceadas?", "tag": "metricas"},
+
+    {"texto": "¿cómo funciona un generador y un discriminador?", "tag": "autoencoder_gan"},
+    {"texto": "¿qué es un autocodificador?", "tag": "autoencoder_gan"},
+    {"texto": "¿cómo crea imágenes la inteligencia artificial?", "tag": "autoencoder_gan"},
+
+    {"texto": "¿cómo contestas mis preguntas?", "tag": "chatbot"},
+    {"texto": "¿eres un robot?", "tag": "chatbot"},
+    {"texto": "¿qué tecnología usas por dentro?", "tag": "chatbot"},
+
+    {"texto": "¿a qué hora cierra el supermercado?", "tag": "fuera_de_dominio"},
+    {"texto": "¿quién ganó el mundial pasado?", "tag": "fuera_de_dominio"},
+    {"texto": "recomiéndame un restaurante de mariscos", "tag": "fuera_de_dominio"},
+    {"texto": "¿cómo se hace un pastel de chocolate?", "tag": "fuera_de_dominio"},
+    {"texto": "¿va a llover el fin de semana?", "tag": "fuera_de_dominio"}
+  ]
+}
