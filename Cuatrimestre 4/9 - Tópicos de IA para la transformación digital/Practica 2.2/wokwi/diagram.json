@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "author": "Marco Sebastian Hernandez Parada",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -105,
+      "left": 160,
+      "attrs": { "temperature": "29", "humidity": "56" }
+    },
+    { "type": "wokwi-resistor", "id": "r1", "top": 150, "left": 160, "attrs": { "value": "220" } },
+    { "type": "wokwi-led", "id": "led1", "top": 100, "left": 270, "attrs": { "color": "blue" } },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -262.4,
+      "left": 130.4,
+      "attrs": { "pins": "i2c" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "dht1:VCC", "esp:3V3", "red", [] ],
+    [ "dht1:GND", "esp:GND.1", "black", [] ],
+    [ "dht1:SDA", "esp:D15", "green", [] ],
+    [ "esp:D4", "r1:1", "blue", [] ],
+    [ "r1:2", "led1:A", "blue", [] ],
+    [ "led1:C", "esp:GND.1", "black", [] ],
+    [ "lcd1:GND", "esp:GND.2", "black", [] ],
+    [ "lcd1:VCC", "esp:VIN", "red", [] ],
+    [ "lcd1:SDA", "esp:D21", "purple", [] ],
+    [ "lcd1:SCL", "esp:D22", "orange", [] ]
+  ],
+  "dependencies": {}
+}
